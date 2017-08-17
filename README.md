@@ -1,2 +1,2 @@
 # machineLearningCoursera
-Assignments from Coursera machine learning course
+Notes and assignments from Coursera Machine Learning course

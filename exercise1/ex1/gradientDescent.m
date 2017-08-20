@@ -17,12 +17,14 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-
-
-
-
-
-
+    hypothesis = X * theta;
+    
+    tempTheta = alpha/m * X' * (hypothesis - y);
+    
+    theta = tempTheta;
+    
+    
+    
     % ============================================================
 
     % Save the cost J in every iteration    

@@ -17,7 +17,11 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-
+    hypothesis = X * theta;
+    
+    tempTheta = alpha / m * X' * (hypothesis - y);
+    
+    theta = theta - tempTheta;
 
 
 

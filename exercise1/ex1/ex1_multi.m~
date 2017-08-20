@@ -109,8 +109,7 @@ fprintf('\n');
 % not need to be normalized.
 %price = 0; % You should change this
 
-features = [1,(1650-mu(1,1))/sigma(1,1),(3-mu(1,2))/sigma(1,2)];
-price = features * theta;
+price = [1,(1650-mu(1,1))/sigma(1,1),(3-mu(1,2))/sigma(1,2)];
 
 
 % ============================================================

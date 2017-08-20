@@ -19,9 +19,9 @@ for iter = 1:num_iters
 
     hypothesis = X * theta;
     
-    tempTheta = alpha/m * X' * (hypothesis - y);
+    tempTheta = alpha / m * X' * (hypothesis - y);
     
-    theta = tempTheta;
+    theta = theta - tempTheta;
     
     
     

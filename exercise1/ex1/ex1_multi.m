@@ -51,6 +51,9 @@ fprintf('Normalizing Features ...\n');
 
 [X mu sigma] = featureNormalize(X);
 
+fprintf('First 10 examples from the normalized dataset: \n');
+fprintf(' x = [%.4f %.4f], y = %.4f \n', [X(1:10,:) y(1:10,:)]');
+
 % Add intercept term to X
 X = [ones(m, 1) X];
 

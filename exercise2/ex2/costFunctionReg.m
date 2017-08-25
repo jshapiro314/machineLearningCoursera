@@ -21,13 +21,12 @@ grad = zeros(size(theta));
 
 hypothesis = sigmoid(X*theta);
 %Avoid using theta0 for regularization
-subTheta = theta(:,2:end);
-J = 1/m * (-y' * log(hypothesis)-(1-y)' * log(1-hypothesis)) + (lambda/2*m) * (subTheta' * subTheta);
+theta(1) = 0;
+J = 1/m * (-y' * log(hypothesis)-(1-y)' * log(1-hypothesis)) + (lambda/(2*m)) * (theta' * theta);
 
 %Then computing gradient...
 
 grad = 1/m * X' * (hypothesis - y);
-theta(1) = 0;
 grad = grad + (lambda / m) * theta;
 
 

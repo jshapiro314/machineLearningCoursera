@@ -22,27 +22,10 @@ p = zeros(size(X, 1), 1);
 %
 
 
-%First we add a column of 1s to X to get a1
+%First we add a column of 0s to X to get a1
 a1 = [ones(m, 1) X];
 
-%Now we multiply a1 by theta1 to get z2
-z2 = a1 * Theta1';
-
-%Take the sigmoid and add the column of 1s to z2 to get a2
-a2 = [ones(m, 1) sigmoid(z2)];
-
-%Now we multiply a2 by theta2 to get z3
-z3 = a2 * Theta2';
-
-%Take the sigmoid to get a3, which is also our hypothesis. This will by an
-%mx10 matrix since we have 10 classifiers
-a3 = sigmoid(z3);
-
-%Transpose a3 to help taking the max indices of the hypothesis
-[test,I] = max(a3');
-
-%Output predictions
-p = I;
+%Now we multiply a1 by theta1 to get 
 
 
 

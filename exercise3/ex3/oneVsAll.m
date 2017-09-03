@@ -60,7 +60,6 @@ for label = 1:num_labels
    
     %Set options for fmincg
     options = optimset('GradObj','on','MaxIter',50);
-    lambda = 1;
     
     %Run fmincg
     [theta] = fmincg(@(t)(lrCostFunction(t, X, new_y, lambda)), initial_theta, options);

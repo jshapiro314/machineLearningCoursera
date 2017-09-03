@@ -30,10 +30,9 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-possible_y = sigmoid(all_theta * X');
-[test,I] = max(possible_y);
 
-p = I;
+
+p = sigmoid(X * theta);
 
 
 

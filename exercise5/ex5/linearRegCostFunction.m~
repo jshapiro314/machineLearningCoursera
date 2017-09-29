@@ -26,9 +26,6 @@ hypothesis = X * theta;
 theta(1) = 0;
 J = 1/(2 * m) * (hypothesis - y)' * (hypothesis - y) + lambda/(2 * m) * (theta' * theta);
 
-%Gradient function:
-grad = 1 / m * X' * (hypothesis - y) + lambda/m * theta;
-
 
 
 

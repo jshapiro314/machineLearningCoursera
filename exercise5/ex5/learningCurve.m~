@@ -55,6 +55,7 @@ error_val   = zeros(m, 1);
 
 
 for i=1:m
+   
     %Begin by getting training data and labels of the correct size
     xTrain = X(1:i,:);
     yTrain = y(1:i);
@@ -62,9 +63,11 @@ for i=1:m
     %Train model based on above data
     theta = trainLinearReg(xTrain,yTrain, lambda);
     
-    %Fetch training and cross-validation cost
-    error_train(i) = linearRegCostFunction(xTrain,yTrain,theta,0);
-    error_val(i) = linearRegCostFunction(Xval,yval,theta,0);
+    %Fetch training cost
+    
+    jTrain = linearRegCostFunction(xTrain,yTrain,theta,lambda);
+    
+    
 end
 
 

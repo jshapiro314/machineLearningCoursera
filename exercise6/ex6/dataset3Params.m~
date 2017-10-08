@@ -26,18 +26,14 @@ sigma = 0.3;
 %Create lists holding all possible C and sigma values we want to test
 potentialValues = [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30];
 
-%Create var to hold lowest error, initialize it to highest value possible
-bestError = realmax;
-
 %Iterate over potential Cs and Sigmas
 for potentialC = potentialValues
    for potentialSigma=potentialValues
        model = svmTrain(X, y, potentialC, @(x1, x2) gaussianKernel(x1, x2, potentialSigma)); 
        error = mean(double(svmPredict(model,Xval) ~= yval));
-       if error < bestError
+       if error < b
            C = potentialC;
            sigma = potentialSigma;
-           bestError = error;
    end
 end
 

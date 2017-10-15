@@ -26,13 +26,10 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
-numSamples = zeros(K, 1);
-for i = 1: m
-    numSamples(idx(i)) = numSamples(idx(i)) + 1;
-    centroids(idx(i),:) = centroids(idx(i),:) + X(i,:); 
-end
-for i = 1: K
-    centroids(i,:) = centroids(i,:) / numSamples(i);
+for i = 1:K
+   for j 
+    
+    
 end
 
 % =============================================================
